@@ -13,7 +13,9 @@ import re
 import os
 import warnings
 import pandas as pd
+import matplotlib
 import matplotlib.pyplot as plt
+# matplotlib.use('TkAgg')
 
 MIN_ALLOWED_VALUE = -10000
 EPS = 1
@@ -313,7 +315,7 @@ class PatchExtractor(object):
             if return_fig:
                 return fig
             else:
-                fig.show()
-                plt.close(fig)
+                plt.show()
+                # plt.close(fig)
         else:
             raise ValueError('Plot works only for tensors: size must be > 1...')
