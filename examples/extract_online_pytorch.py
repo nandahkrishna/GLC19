@@ -19,13 +19,11 @@ class GeoLifeClefDataset(Dataset):
 
 
 if __name__ == '__main__':
-    patch_extractor = PatchExtractor('../rasters GLC19', size=64, verbose=True)
+    patch_extractor = PatchExtractor('/data/rasters_GLC19', size=64, verbose=True)
 
-    # patch_extractor.append('chbio_1')
-    # patch_extractor.append('text')
-    patch_extractor.add_all()
-    env_tensor= patch_extractor[43.61, 3.88]
-    patch_extractor.plot((43.61,3.88))
+    patch_extractor.append('chbio_1')
+    patch_extractor.append('text')
+    # patch_extractor.add_all()
 
     # example of dataset
     dataset_list = [(43.61, 3.88), (42.61, 4.88), (46.15, -1.1), (49.54, -1.7)]
